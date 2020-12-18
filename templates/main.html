@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <style>
+        		.head_text{
+			font-size: 30px;
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			font-style: italic;
+			text-align: center;
+			border-radius: 10px;
+			border-color: blueviolet;
+			border-style: inset;
+		}
+        form {
+            margin: auto;
+            width: 35%;
+            font-size: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        textarea{
+            border-radius: 10px;
+            font-size: 18px;
+            border-color: crimson;
+            border-style: inset;
+        }
+        .btn-info{
+            padding: 20px;
+        }
+        h2{
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+        }
+  
+        </style>
+<head>
+<title>Malayalam News Heading Classifier</title>
+</head>
+<div class="head_text"><h1>Malayalam News Heading Classifier</h1></div>
+<h2>This app classifies malayalam news headings into three categories - Sports , Buisness , Entertainment</h2>
+    <div >
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter Your Message Here:</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="heading" rows="20" cols="60"></textarea>
+		<br/>
+		<input type="submit" class="btn-info" value='Predict'>
+		
+    </form>
+
+		
+	</div>
+</div>
+</html>

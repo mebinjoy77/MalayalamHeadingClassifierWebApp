@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		.head_text{
+			font-size: 30px;
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			font-style: italic;
+			text-align: center;
+			border-radius: 10px;
+			border-color: blueviolet;
+			border-style: inset;
+		}
+		title{
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		}
+		p{
+			font-size: 20px;
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			color: cornflowerblue;
+			text-align: center;
+		}
+		.res{
+			font-size: 30px;
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			border-radius: 10px;
+			border-color: crimson;
+			border-style: inset;
+			text-align: center;
+		}
+	</style>
+<head>
+	<title>Malayalam News Heading Classifier</title>
+    
+</head>
+<body>
+	<header>
+		<div class="head_text">
+		
+		<h1>Malayalam News Heading Classifier</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for Comment</b></p>
+	<div class="res">
+		
+	{% if prediction ==0%}
+	<h2 style="color:red;">Buisness</h2>
+	{% elif prediction == 1%}
+    <h2 style="color:green;">Entertainment</h2>
+    {% elif prediction == 2%}
+	<h2 style="color:blue;">Sports</h2>
+	{% endif %}
+	</div>
+</body>
+</html>
